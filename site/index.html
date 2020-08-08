@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="prg.js"></script>
+	<link rel="stylesheet" type="text/css" href="registration.css">
+</head>
+<body>
+	<script>
+		function conf(){
+		var txt;
+		var r = confirm("Press a button!");
+		if (r == true) {
+ 			txt = "You pressed OK!";
+		} else {
+ 			txt = "You pressed Cancel!";
+		}
+		document.write(txt);
+		}
+	</script>
+	Customer Name
+	Password
+	Confirm Password
+	Mobile Number
+	Gender (Radio button)
+	Date of Birth (Input type Date)
+	City (Dropdown list [Bengaluru, Chennai, Delhi, Mumbai])
+	Country (Dropdown List [INDIA, USA, GERMANY, FRANCE], default INDIA)
+	Submit form is a button with label “Submit”
+	<form name="myForm" onsubmit="return(validate())">
+	<div class="text">
+		<input class="textbox" type="text" placeholder="Customer Name"  
+		minlength="6"><br/>
+		<input class="textbox" type="Password" placeholder="Password"><br/>
+		<input class="textbox" type="Password" placeholder="Confirm Password"><br/>
+		<input class="textbox" type="tel" placeholder="Mobile Number">
+		<br/>
+		Gender:<br/>
+		<input type="radio" value="Male"> Male<br/>
+		<input type="radio" value="Female">Female<br/>
+		<input class="button-box" type="submit" value="submit">
+	</div>
+	</form>
+
+	</body>
+</html>
