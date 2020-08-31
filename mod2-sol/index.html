@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment2</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="myBuyController as buyctrl">
+		<h2>To Buy:</h2>
+		<ul>
+			<li ng-repeat="item in buyctrl.items">
+				Buy {{item.quantity}} {{item.name}}
+				<button ng-click="buyctrl.bought($index);">
+					Bought					
+				</button>
+			</li>
+			<div ng-if="buyctrl.items.length == 0">
+				Everything has been bought yet.
+			</div>
+		</ul>
+		
+	</div>
+	<div ng-controller="myBoughtController as boughtCtrl">
+		<h2>Bought Items:</h2>
+		<ul>
+			<li ng-repeat="item in boughtCtrl.items">
+				Bought{{item.quantity}} {{item.name}}
+
+			</li>
+			<div ng-if="boughtCtrl.items.length==0"> Nothing has been bought yet.</div>
+		</ul>
+	</div>
+</body>
+</html>
